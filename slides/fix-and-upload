@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+set -u
+
+mkdir -p dist
+
+function upload() {
+    MOD="$1"
+    yarn run slidev build --dark=true --out "dist/${MOD}" --base "/presentations/rust-101/${MOD}" "${MOD}.md"
+    rsync -v -r "dist/${MOD}/" "dreamhost:artificialworlds.net/presentations/rust-101/${MOD}/"
+}
+
+
+#upload 0-intro
+upload A1-intro-to-rust
+upload A2-advanced-intro
+upload A2-tools
+upload A3-traits-generics
+upload B-application-programming
+upload C-concurrency-parallelism
+upload D-trait-objects-patterns
+upload E-async-web
+upload F-safe-unsafe-rust
+upload G-ffi
+
