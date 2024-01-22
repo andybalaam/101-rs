@@ -1301,13 +1301,8 @@ fn get_v_arr() -> &'static [i32] {
     &[0, 1, 2, 3, 4, 5, 6]
 }
 
-fn get_v_vec() -> &'static [i32] {
-    &vec![0, 1, 2, 3, 4, 5, 6]
-}
-
 fn main() {
   let all = sum(get_v_arr());
-  let all_vec = sum(get_v_vec());
 }
 ```
 
