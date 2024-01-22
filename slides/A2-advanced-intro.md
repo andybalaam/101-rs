@@ -12,10 +12,10 @@ layout: cover
 title: "Rust - A2: Advanced Syntax, Ownership, References"
 ---
 
-# In this module
+# A2: Advanced Rust syntax
 
 <!-- Introduce today's subject -->
-Advanced Rust syntax
+Borrowing, structs and error handling
 
 ---
 
